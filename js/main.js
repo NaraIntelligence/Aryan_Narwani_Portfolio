@@ -34,6 +34,11 @@ try {
   initFlightPath();
   initContact(lenis);
 
+  /* Web fonts swap in after load and change section heights → re-measure all triggers */
+  if (document.fonts && typeof ScrollTrigger !== 'undefined') {
+    document.fonts.ready.then(() => ScrollTrigger.refresh());
+  }
+
 } catch (e) {
   console.error('Portfolio init error:', e);
   if (typeof window.__forceHidePreloader === 'function') {

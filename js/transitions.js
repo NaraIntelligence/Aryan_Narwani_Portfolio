@@ -5,7 +5,7 @@ const sectionMeta = {
   'about':      { label: '01 — About',      title: 'ABOUT',   counter: '01 / 06' },
   'skills':     { label: '02 — Stack',      title: 'STACK',   counter: '02 / 06' },
   'projects':   { label: '03 — Work',       title: 'WORK',    counter: '03 / 06' },
-  'experience': { label: '04 — Experience', title: 'JOURNEY', counter: '04 / 06', fontSize: 'clamp(3rem,9vw,11rem)' },
+  /* experience: no overlay — the paper-plane flight path is its entrance */
   'focus':      { label: '05 — Value',      title: 'BUILD',   counter: '05 / 06' },
   'contact':    { label: '06 — Contact',    title: 'CONTACT', counter: '06 / 06', fontSize: 'clamp(3rem,10vw,12rem)' },
 };

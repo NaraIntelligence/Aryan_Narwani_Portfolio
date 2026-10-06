@@ -116,17 +116,30 @@
   content:'';width:1.5rem;height:1px;background:var(--accent);opacity:.6;
 }
 
-/* ─── Zig-zag layout: cards alternate sides, each dot sits in the
-       empty half so the route sweeps across the whole width ─── */
-@media(min-width:641px){
-  .timeline-item{width:46%;padding-left:0;padding-bottom:5rem;}
-  .timeline-item:last-child{padding-bottom:0;}
-  .timeline-item:nth-of-type(even){margin-left:auto;}
-  .timeline-item .timeline-dot{top:50%;margin:-8.5px 0 0 -8.5px;}
-  .timeline-item:nth-of-type(odd) .timeline-dot{left:173.9%;}  /* 80% of the timeline */
-  .timeline-item:nth-of-type(even) .timeline-dot{left:-73.9%;} /* 20% of the timeline */
+/* ─── Zig-zag layout (all widths): cards alternate sides, starting on the
+       right; each dot sits in the empty side so the route starts under the
+       title and sweeps from side to side ─── */
+.timeline{padding-top:1rem;}
+.timeline-item{width:44%;padding-left:0;padding-bottom:5rem;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-item:nth-of-type(odd){margin-left:auto;}
+.timeline-item .timeline-dot{top:50%;margin:-8.5px 0 0 -8.5px;}
+.timeline-item:nth-of-type(odd) .timeline-dot{left:-77.27%;}  /* 22% of the timeline */
+.timeline-item:nth-of-type(even) .timeline-dot{left:177.27%;} /* 78% of the timeline */
+
+/* Cards fade in one by one as the plane approaches (only once JS is ready) */
+.timeline.is-ready .timeline-item{
+  opacity:0;transform:translateY(28px);filter:blur(6px);
+  transition:opacity .9s cubic-bezier(.22,1,.36,1),transform .9s cubic-bezier(.22,1,.36,1),filter .9s cubic-bezier(.22,1,.36,1);
 }
-/* Mobile: gentle zig-zag inside the left gutter */
+.timeline.is-ready .timeline-item.is-visible{opacity:1;transform:none;filter:none;}
+
 @media(max-width:640px){
-  .timeline-item:nth-of-type(even) .timeline-dot{left:22px;}
+  .timeline-item{width:80%;padding-bottom:6rem;}
+  .timeline-item:nth-of-type(odd) .timeline-dot{left:-12.5%;}  /* 10% of the timeline */
+  .timeline-item:nth-of-type(even) .timeline-dot{left:112.5%;} /* 90% of the timeline */
+  .timeline-title{font-size:1.1rem;}
+}
+@media(prefers-reduced-motion:reduce){
+  .timeline.is-ready .timeline-item{transition:none;filter:none;}
 }
