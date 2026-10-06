@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   CAROUSEL — Swiper coverflow (projects & skills)
+   CAROUSEL — Swiper coverflow (projects)
 ═══════════════════════════════════════════════════════════════════ */
 .carousel .swiper{padding:1rem 0 9rem;}
 
@@ -30,8 +30,6 @@
   padding:.3rem .65rem;border:1px solid rgba(0,212,255,.25);
 }
 
-.carousel--compact .carousel-slide{min-height:420px;}
-
 /* Coverflow shadows follow the square card edges */
 .carousel .swiper-slide-shadow-left,
 .carousel .swiper-slide-shadow-right{z-index:3;}
@@ -46,6 +44,5 @@
 
 @media(max-width:640px){
   .carousel-slide{min-height:620px;}
-  .carousel--compact .carousel-slide{min-height:440px;}
   .carousel-slide-content{padding:1.6rem;}
 }

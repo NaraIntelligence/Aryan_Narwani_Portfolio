@@ -1,5 +1,5 @@
 /* ═══════════════════════════════════════════════════════════════════
-   CAROUSEL — Swiper coverflow for projects & skills
+   CAROUSEL — Swiper coverflow for projects
 ═══════════════════════════════════════════════════════════════════ */
 export function initCarousels() {
   if (typeof Swiper === 'undefined') return;
@@ -12,6 +12,7 @@ export function initCarousels() {
       centeredSlides: true,
       loop: true,
       speed: 600,
+      autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
       /* forceToAxis: only horizontal wheel moves it, so page scroll (Lenis) isn't trapped */
       mousewheel: { forceToAxis: true },
       keyboard: { enabled: true, onlyInViewport: true },
