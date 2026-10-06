@@ -26,8 +26,10 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@14.3.0/swiper-bundle.min.js"></script>
 
 <!-- STYLES -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.3.0/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="css/base.css"/>
 <link rel="stylesheet" href="css/preloader.css"/>
 <link rel="stylesheet" href="css/nav.css"/>
@@ -36,6 +38,7 @@
 <link rel="stylesheet" href="css/about.css"/>
 <link rel="stylesheet" href="css/skills.css"/>
 <link rel="stylesheet" href="css/projects.css"/>
+<link rel="stylesheet" href="css/carousel.css"/>
 <link rel="stylesheet" href="css/experience.css"/>
 <link rel="stylesheet" href="css/focus.css"/>
 <link rel="stylesheet" href="css/contact.css"/>
@@ -132,7 +135,7 @@
       <div class="hero-meta">
         <div class="hero-meta-block">
           <span class="hero-meta-label">Based in</span>
-          <span class="hero-meta-val">Madrid, Spain</span>
+          <span class="hero-meta-val">Bangalore, India</span>
         </div>
         <div class="hero-meta-block">
           <span class="hero-meta-label">Focus</span>
@@ -251,99 +254,111 @@
     <div class="section-label" data-anim="fade">02 — Tech stack</div>
     <h2 class="section-title" data-anim="title">What I <em>work</em><br/><span class="outline">with daily.</span></h2>
 
-    <div class="skills-grid">
-      <div class="skill-card" data-anim="card">
-        <div class="skill-card-head">
-          <div class="skill-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
-          <span class="skill-card-name">Agents &amp; LLMs</span>
+    <div class="carousel carousel--compact" data-anim="fade">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/skill-01.svg)">
+            <div class="carousel-slide-content">
+            <div class="skill-card-head">
+              <div class="skill-card-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+              <span class="skill-card-name">Agents &amp; LLMs</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Claude (Anthropic)</span>
+              <span class="skill-tag">GPT-4o</span>
+              <span class="skill-tag">Whisper</span>
+              <span class="skill-tag">RAG</span>
+              <span class="skill-tag">Tool use / MCP</span>
+              <span class="skill-tag">Structured extraction</span>
+              <span class="skill-tag">Prompt engineering</span>
+              <span class="skill-tag">LangChain</span>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/skill-02.svg)">
+            <div class="carousel-slide-content">
+            <div class="skill-card-head">
+              <div class="skill-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
+              <span class="skill-card-name">Automation</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">n8n</span>
+              <span class="skill-tag">Make</span>
+              <span class="skill-tag">Webhooks</span>
+              <span class="skill-tag">Cron jobs</span>
+              <span class="skill-tag">Power Automate</span>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/skill-03.svg)">
+            <div class="carousel-slide-content">
+            <div class="skill-card-head">
+              <div class="skill-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
+              <span class="skill-card-name">Channels &amp; Integrations</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">WhatsApp Cloud API</span>
+              <span class="skill-tag">Twilio</span>
+              <span class="skill-tag">Gmail API</span>
+              <span class="skill-tag">Google Calendar</span>
+              <span class="skill-tag">Google Business Profile API</span>
+              <span class="skill-tag">Enable Banking (PSD2)</span>
+              <span class="skill-tag">Apple / Google Wallet</span>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/skill-04.svg)">
+            <div class="carousel-slide-content">
+            <div class="skill-card-head">
+              <div class="skill-card-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
+              <span class="skill-card-name">Backend &amp; Data</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">FastAPI</span>
+              <span class="skill-tag">PostgreSQL</span>
+              <span class="skill-tag">Supabase (RLS, Storage)</span>
+              <span class="skill-tag">pgvector</span>
+              <span class="skill-tag">SQLAlchemy</span>
+              <span class="skill-tag">Redis</span>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/skill-05.svg)">
+            <div class="carousel-slide-content">
+            <div class="skill-card-head">
+              <div class="skill-card-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+              <span class="skill-card-name">Frontend</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">TypeScript</span>
+              <span class="skill-tag">Vite</span>
+              <span class="skill-tag">three.js</span>
+              <span class="skill-tag">anime.js</span>
+              <span class="skill-tag">GSAP</span>
+            </div>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/skill-06.svg)">
+            <div class="carousel-slide-content">
+            <div class="skill-card-head">
+              <div class="skill-card-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
+              <span class="skill-card-name">Cloud &amp; DevOps</span>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag">Vercel</span>
+              <span class="skill-tag">Render</span>
+              <span class="skill-tag">Railway</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">GitHub Actions</span>
+              <span class="skill-tag">Claude Code</span>
+              <span class="skill-tag">Azure Functions</span>
+            </div>
+            </div>
+          </div>
         </div>
-        <div class="skill-tags">
-          <span class="skill-tag">Claude (Anthropic)</span>
-          <span class="skill-tag">GPT-4o</span>
-          <span class="skill-tag">Whisper</span>
-          <span class="skill-tag">RAG</span>
-          <span class="skill-tag">Tool use / MCP</span>
-          <span class="skill-tag">Structured extraction</span>
-          <span class="skill-tag">Prompt engineering</span>
-          <span class="skill-tag">LangChain</span>
-        </div>
-      </div>
-
-      <div class="skill-card" data-anim="card">
-        <div class="skill-card-head">
-          <div class="skill-card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg></div>
-          <span class="skill-card-name">Automation</span>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">n8n</span>
-          <span class="skill-tag">Make</span>
-          <span class="skill-tag">Webhooks</span>
-          <span class="skill-tag">Cron jobs</span>
-          <span class="skill-tag">Power Automate</span>
-        </div>
-      </div>
-
-      <div class="skill-card" data-anim="card">
-        <div class="skill-card-head">
-          <div class="skill-card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div>
-          <span class="skill-card-name">Channels &amp; Integrations</span>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">WhatsApp Cloud API</span>
-          <span class="skill-tag">Twilio</span>
-          <span class="skill-tag">Gmail API</span>
-          <span class="skill-tag">Google Calendar</span>
-          <span class="skill-tag">Google Business Profile API</span>
-          <span class="skill-tag">Enable Banking (PSD2)</span>
-          <span class="skill-tag">Apple / Google Wallet</span>
-        </div>
-      </div>
-
-      <div class="skill-card" data-anim="card">
-        <div class="skill-card-head">
-          <div class="skill-card-icon"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg></div>
-          <span class="skill-card-name">Backend &amp; Data</span>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">Python</span>
-          <span class="skill-tag">FastAPI</span>
-          <span class="skill-tag">PostgreSQL</span>
-          <span class="skill-tag">Supabase (RLS, Storage)</span>
-          <span class="skill-tag">pgvector</span>
-          <span class="skill-tag">SQLAlchemy</span>
-          <span class="skill-tag">Redis</span>
-        </div>
-      </div>
-
-      <div class="skill-card" data-anim="card">
-        <div class="skill-card-head">
-          <div class="skill-card-icon"><svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-          <span class="skill-card-name">Frontend</span>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">React</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Vite</span>
-          <span class="skill-tag">three.js</span>
-          <span class="skill-tag">anime.js</span>
-          <span class="skill-tag">GSAP</span>
-        </div>
-      </div>
-
-      <div class="skill-card" data-anim="card">
-        <div class="skill-card-head">
-          <div class="skill-card-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg></div>
-          <span class="skill-card-name">Cloud &amp; DevOps</span>
-        </div>
-        <div class="skill-tags">
-          <span class="skill-tag">Vercel</span>
-          <span class="skill-tag">Render</span>
-          <span class="skill-tag">Railway</span>
-          <span class="skill-tag">Docker</span>
-          <span class="skill-tag">GitHub Actions</span>
-          <span class="skill-tag">Claude Code</span>
-          <span class="skill-tag">Azure Functions</span>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </div>
@@ -363,131 +378,144 @@
       </div>
     </div>
 
-    <div class="projects-grid">
-
-      <div class="project-card featured span-2" data-anim="card">
-        <div class="project-num">001</div>
-        <div class="project-title">Autonomous Developer Agent</div>
-        <div class="project-desc">An AI agent that works like a developer on the team. It takes raw meeting notes, plans the solution, provisions infrastructure (e.g. creates and connects a Supabase project), writes the code in GitHub and deploys to Vercel, Render or n8n — without manual steps.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">Claude</span>
-          <span class="project-tech-tag">GitHub API</span>
-          <span class="project-tech-tag">Vercel</span>
-          <span class="project-tech-tag">Render</span>
-          <span class="project-tech-tag">Supabase</span>
-          <span class="project-tech-tag">n8n</span>
+    <div class="carousel" data-anim="fade">
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide carousel-slide carousel-slide--featured" style="background-image:url(assets/placeholders/project-01.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">001</div>
+            <div class="project-title">Autonomous Developer Agent</div>
+            <div class="project-desc">An AI agent that works like a developer on the team. It takes raw meeting notes, plans the solution, provisions infrastructure (e.g. creates and connects a Supabase project), writes the code in GitHub and deploys to Vercel, Render or n8n — without manual steps.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">Claude</span>
+              <span class="project-tech-tag">GitHub API</span>
+              <span class="project-tech-tag">Vercel</span>
+              <span class="project-tech-tag">Render</span>
+              <span class="project-tech-tag">Supabase</span>
+              <span class="project-tech-tag">n8n</span>
+            </div>
+            <span class="project-link">● In progress</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-02.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">002</div>
+            <div class="project-title">AI Clinical Session Notes</div>
+            <div class="project-desc">Digital employee for a physiotherapy clinic. Therapists send text, voice notes or photos of their notes; the agent transcribes, analyzes and turns them into a structured clinical record, with a private professional version and a patient-friendly one. Includes consent lock, idempotency, AI verification of every report and least-privilege database access.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">n8n</span>
+              <span class="project-tech-tag">Whisper</span>
+              <span class="project-tech-tag">GPT-4o Vision</span>
+              <span class="project-tech-tag">Supabase</span>
+              <span class="project-tech-tag">PostgreSQL</span>
+            </div>
+            <span class="project-link">● Live</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-03.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">003</div>
+            <div class="project-title">Biomechanical Study Platform</div>
+            <div class="project-desc">Web platform for a physiotherapy clinic that replaces a manual photo-and-Word workflow: staff upload the 4 posture views, AI places the anatomical points and lines, and the therapist reviews them in a drag-and-drop editor before generating the report.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">FastAPI</span>
+              <span class="project-tech-tag">Supabase Storage</span>
+              <span class="project-tech-tag">Computer Vision</span>
+              <span class="project-tech-tag">Python</span>
+            </div>
+            <span class="project-link">● In progress</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-04.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">004</div>
+            <div class="project-title">Autonomous B2B Sales Agent</div>
+            <div class="project-desc">Multi-tenant SDR agent built in n8n: lead sourcing, enrichment, company research, scoring, personalized email and WhatsApp outreach, follow-ups, reply classification, opt-out and human escalation. Dry-run and human approval enabled by default.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">n8n</span>
+              <span class="project-tech-tag">LLMs</span>
+              <span class="project-tech-tag">WhatsApp</span>
+              <span class="project-tech-tag">Email</span>
+              <span class="project-tech-tag">CRM</span>
+            </div>
+            <span class="project-link">● In progress</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-05.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">005</div>
+            <div class="project-title">Sync Banking</div>
+            <div class="project-desc">Automatic bank transaction sync via Open Banking (PSD2) with a rules engine and AI categorization fallback. Multi-tenant by design and running in production for a retail business.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">FastAPI</span>
+              <span class="project-tech-tag">Enable Banking</span>
+              <span class="project-tech-tag">Claude Haiku</span>
+              <span class="project-tech-tag">PostgreSQL</span>
+              <span class="project-tech-tag">React</span>
+            </div>
+            <span class="project-link">● Live</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-06.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">006</div>
+            <div class="project-title">WhatsApp Personal Assistant</div>
+            <div class="project-desc">Forward or dictate a meeting request on WhatsApp: the agent checks the calendar, confirms or proposes alternatives as buttons, separates work and personal events, and also captures tasks into a self-organizing Kanban board. Voice notes are transcribed in the same workflow.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">n8n</span>
+              <span class="project-tech-tag">WhatsApp Cloud API</span>
+              <span class="project-tech-tag">Google Calendar</span>
+              <span class="project-tech-tag">Whisper</span>
+              <span class="project-tech-tag">Supabase</span>
+            </div>
+            <span class="project-link">● Live</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-07.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">007</div>
+            <div class="project-title">AI Review Responder</div>
+            <div class="project-desc">Detects new Google Business Profile reviews, analyzes them with AI and publishes a tailored reply automatically. In production for a retail store.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">n8n</span>
+              <span class="project-tech-tag">Google Business Profile API</span>
+              <span class="project-tech-tag">OpenAI</span>
+            </div>
+            <span class="project-link">● Live</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-08.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">008</div>
+            <div class="project-title">Client Change-Request Pipeline</div>
+            <div class="project-desc">Clients send change requests by WhatsApp; the agent turns them into code changes and opens a pull request, and I approve or reject from WhatsApp before merge and deploy.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">WhatsApp Cloud API</span>
+              <span class="project-tech-tag">Claude Code</span>
+              <span class="project-tech-tag">GitHub</span>
+              <span class="project-tech-tag">n8n</span>
+            </div>
+            <span class="project-link">● In progress</span>
+            </div>
+          </div>
+          <div class="swiper-slide carousel-slide" style="background-image:url(assets/placeholders/project-09.svg)">
+            <div class="carousel-slide-content">
+            <div class="project-num">009</div>
+            <div class="project-title">WhatsApp Business Manager</div>
+            <div class="project-desc">SaaS for small service businesses: a WhatsApp AI assistant for bookings plus an admin panel with appointments, staff scheduling (drag-and-drop Gantt), inventory and suppliers. 200+ automated tests.</div>
+            <div class="project-tech">
+              <span class="project-tech-tag">FastAPI</span>
+              <span class="project-tech-tag">Claude</span>
+              <span class="project-tech-tag">Twilio</span>
+              <span class="project-tech-tag">pgvector</span>
+              <span class="project-tech-tag">React</span>
+            </div>
+            <span class="project-link">● In progress</span>
+            </div>
+          </div>
         </div>
-        <span class="project-link">● In progress</span>
+        <div class="swiper-pagination"></div>
       </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">002</div>
-        <div class="project-title">AI Clinical Session Notes</div>
-        <div class="project-desc">Digital employee for a physiotherapy clinic. Therapists send text, voice notes or photos of their notes; the agent transcribes, analyzes and turns them into a structured clinical record, with a private professional version and a patient-friendly one. Includes consent lock, idempotency, AI verification of every report and least-privilege database access.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">n8n</span>
-          <span class="project-tech-tag">Whisper</span>
-          <span class="project-tech-tag">GPT-4o Vision</span>
-          <span class="project-tech-tag">Supabase</span>
-          <span class="project-tech-tag">PostgreSQL</span>
-        </div>
-        <span class="project-link">● Live</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">003</div>
-        <div class="project-title">Biomechanical Study Platform</div>
-        <div class="project-desc">Web platform for a physiotherapy clinic that replaces a manual photo-and-Word workflow: staff upload the 4 posture views, AI places the anatomical points and lines, and the therapist reviews them in a drag-and-drop editor before generating the report.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">FastAPI</span>
-          <span class="project-tech-tag">Supabase Storage</span>
-          <span class="project-tech-tag">Computer Vision</span>
-          <span class="project-tech-tag">Python</span>
-        </div>
-        <span class="project-link">● In progress</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">004</div>
-        <div class="project-title">Autonomous B2B Sales Agent</div>
-        <div class="project-desc">Multi-tenant SDR agent built in n8n: lead sourcing, enrichment, company research, scoring, personalized email and WhatsApp outreach, follow-ups, reply classification, opt-out and human escalation. Dry-run and human approval enabled by default.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">n8n</span>
-          <span class="project-tech-tag">LLMs</span>
-          <span class="project-tech-tag">WhatsApp</span>
-          <span class="project-tech-tag">Email</span>
-          <span class="project-tech-tag">CRM</span>
-        </div>
-        <span class="project-link">● In progress</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">005</div>
-        <div class="project-title">Sync Banking</div>
-        <div class="project-desc">Automatic bank transaction sync via Open Banking (PSD2) with a rules engine and AI categorization fallback. Multi-tenant by design and running in production for a retail business.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">FastAPI</span>
-          <span class="project-tech-tag">Enable Banking</span>
-          <span class="project-tech-tag">Claude Haiku</span>
-          <span class="project-tech-tag">PostgreSQL</span>
-          <span class="project-tech-tag">React</span>
-        </div>
-        <span class="project-link">● Live</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">006</div>
-        <div class="project-title">WhatsApp Personal Assistant</div>
-        <div class="project-desc">Forward or dictate a meeting request on WhatsApp: the agent checks the calendar, confirms or proposes alternatives as buttons, separates work and personal events, and also captures tasks into a self-organizing Kanban board. Voice notes are transcribed in the same workflow.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">n8n</span>
-          <span class="project-tech-tag">WhatsApp Cloud API</span>
-          <span class="project-tech-tag">Google Calendar</span>
-          <span class="project-tech-tag">Whisper</span>
-          <span class="project-tech-tag">Supabase</span>
-        </div>
-        <span class="project-link">● Live</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">007</div>
-        <div class="project-title">AI Review Responder</div>
-        <div class="project-desc">Detects new Google Business Profile reviews, analyzes them with AI and publishes a tailored reply automatically. In production for a retail store.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">n8n</span>
-          <span class="project-tech-tag">Google Business Profile API</span>
-          <span class="project-tech-tag">OpenAI</span>
-        </div>
-        <span class="project-link">● Live</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">008</div>
-        <div class="project-title">Client Change-Request Pipeline</div>
-        <div class="project-desc">Clients send change requests by WhatsApp; the agent turns them into code changes and opens a pull request, and I approve or reject from WhatsApp before merge and deploy.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">WhatsApp Cloud API</span>
-          <span class="project-tech-tag">Claude Code</span>
-          <span class="project-tech-tag">GitHub</span>
-          <span class="project-tech-tag">n8n</span>
-        </div>
-        <span class="project-link">● In progress</span>
-      </div>
-
-      <div class="project-card" data-anim="card">
-        <div class="project-num">009</div>
-        <div class="project-title">WhatsApp Business Manager</div>
-        <div class="project-desc">SaaS for small service businesses: a WhatsApp AI assistant for bookings plus an admin panel with appointments, staff scheduling (drag-and-drop Gantt), inventory and suppliers. 200+ automated tests.</div>
-        <div class="project-tech">
-          <span class="project-tech-tag">FastAPI</span>
-          <span class="project-tech-tag">Claude</span>
-          <span class="project-tech-tag">Twilio</span>
-          <span class="project-tech-tag">pgvector</span>
-          <span class="project-tech-tag">React</span>
-        </div>
-        <span class="project-link">● In progress</span>
-      </div>
-
     </div>
   </div>
 </section>
@@ -552,7 +580,7 @@
         <div class="timeline-dot timeline-dot--glow"></div>
         <div class="timeline-date">2026 — Present</div>
         <div class="timeline-title">Founder &amp; AI Agents Engineer · Nara Intelligence</div>
-        <div class="timeline-sub">Madrid, Spain</div>
+        <div class="timeline-sub">Bangalore, India</div>
         <div class="timeline-desc">Founded Nara Intelligence to build AI agents and digital employees for businesses. Designing, building and running end-to-end agents for real clients across healthcare, retail and services — from discovery and pricing to deployment and maintenance.</div>
         <div class="timeline-tags">
           <span class="timeline-tag">AI Agents</span>
@@ -697,7 +725,7 @@
 
 <!-- ═══ FOOTER ═══ -->
 <footer>
-  <span class="footer-left">Aryan Narwani · Madrid, Spain</span>
+  <span class="footer-left">Aryan Narwani · Bangalore, India</span>
   <span class="footer-center">
     <span class="footer-dot"></span>
     AN

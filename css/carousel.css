@@ -1,0 +1,51 @@
+/* ═══════════════════════════════════════════════════════════════════
+   CAROUSEL — Swiper coverflow (projects & skills)
+═══════════════════════════════════════════════════════════════════ */
+.carousel .swiper{padding:1rem 0 9rem;}
+
+.carousel-slide{
+  height:auto;min-height:560px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  background-color:var(--bg-2);background-size:cover;background-position:center top;
+  border:1px solid var(--line);transition:border-color .5s;
+  -webkit-box-reflect:below 20px linear-gradient(transparent 75%,rgba(0,0,0,.12));
+}
+.carousel-slide::after{
+  content:'';position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(rgba(5,5,5,0) 15%,rgba(5,5,5,.85) 50%,var(--bg) 75%);
+}
+.carousel-slide.swiper-slide-active{border-color:rgba(0,212,255,.35);}
+
+.carousel-slide-content{
+  position:relative;z-index:1;padding:2.2rem;
+  display:flex;flex-direction:column;gap:1.1rem;
+  opacity:0;transition:opacity .5s;
+}
+.carousel-slide.swiper-slide-active .carousel-slide-content{opacity:1;}
+
+.carousel-slide--featured::before{
+  content:'FEATURED';position:absolute;top:1.3rem;right:1.3rem;z-index:2;
+  font-size:.58rem;letter-spacing:.35em;font-family:var(--font-m);
+  color:var(--accent);background:rgba(0,212,255,.08);
+  padding:.3rem .65rem;border:1px solid rgba(0,212,255,.25);
+}
+
+.carousel--compact .carousel-slide{min-height:420px;}
+
+/* Coverflow shadows follow the square card edges */
+.carousel .swiper-slide-shadow-left,
+.carousel .swiper-slide-shadow-right{z-index:3;}
+
+/* Pagination — thin bars instead of dots */
+.carousel .swiper-pagination{bottom:.5rem;}
+.carousel .swiper-pagination-bullet{
+  width:18px;height:2px;border-radius:0;margin:0 4px !important;
+  background:var(--gray-400);opacity:1;transition:width .3s,background .3s;
+}
+.carousel .swiper-pagination-bullet-active{width:36px;background:var(--accent);}
+
+@media(max-width:640px){
+  .carousel-slide{min-height:620px;}
+  .carousel--compact .carousel-slide{min-height:440px;}
+  .carousel-slide-content{padding:1.6rem;}
+}

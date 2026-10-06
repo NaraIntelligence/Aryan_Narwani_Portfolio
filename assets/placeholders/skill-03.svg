@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="g" cx="0.282" cy="0.181" r=".55"><stop offset="0" stop-color="#7b61ff" stop-opacity=".32"/><stop offset="1" stop-color="#7b61ff" stop-opacity="0"/></radialGradient>
+<pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="800" height="1000" fill="#0a0a0a"/>
+<rect width="800" height="1000" fill="url(#p)"/>
+<rect width="800" height="1000" fill="url(#g)"/>
+<g stroke="#7b61ff" stroke-opacity=".35" stroke-width="1.5"><line x1="422" y1="168" x2="428" y2="337"/><line x1="312" y1="92" x2="422" y2="168"/><line x1="461" y1="524" x2="595" y2="450"/><line x1="461" y1="524" x2="144" y2="535"/><line x1="684" y1="287" x2="574" y2="177"/><line x1="422" y1="168" x2="190" y2="174"/><line x1="428" y1="337" x2="461" y2="524"/><line x1="422" y1="168" x2="574" y2="177"/><line x1="684" y1="287" x2="595" y2="450"/><line x1="312" y1="92" x2="190" y2="174"/><line x1="428" y1="337" x2="144" y2="535"/></g>
+<g stroke="#7b61ff" stroke-opacity=".18" stroke-width="1" stroke-dasharray="4 6"><line x1="190" y1="174" x2="144" y2="535"/></g>
+<g fill="#050505" stroke="#7b61ff" stroke-width="2"><circle cx="684" cy="287" r="4"/><circle cx="312" cy="92" r="6"/><circle cx="422" cy="168" r="4"/><circle cx="428" cy="337" r="6"/><circle cx="461" cy="524" r="4"/><circle cx="574" cy="177" r="4"/><circle cx="144" cy="535" r="6"/><circle cx="595" cy="450" r="4"/></g>
+<circle cx="190" cy="174" r="34" fill="#7b61ff" fill-opacity=".08" stroke="#7b61ff" stroke-opacity=".4"/>
+<circle cx="190" cy="174" r="11" fill="#7b61ff"/>
+</svg>

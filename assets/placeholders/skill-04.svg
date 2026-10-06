@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" preserveAspectRatio="xMidYMid slice">
+<defs>
+<radialGradient id="g" cx="0.479" cy="0.203" r=".55"><stop offset="0" stop-color="#00d4ff" stop-opacity=".32"/><stop offset="1" stop-color="#00d4ff" stop-opacity="0"/></radialGradient>
+<pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="800" height="1000" fill="#0a0a0a"/>
+<rect width="800" height="1000" fill="url(#p)"/>
+<rect width="800" height="1000" fill="url(#g)"/>
+<g stroke="#00d4ff" stroke-opacity=".35" stroke-width="1.5"><line x1="284" y1="205" x2="105" y2="200"/><line x1="563" y1="410" x2="648" y2="231"/><line x1="284" y1="205" x2="364" y2="81"/><line x1="485" y1="604" x2="441" y2="487"/><line x1="563" y1="410" x2="441" y2="487"/><line x1="485" y1="604" x2="637" y2="528"/><line x1="563" y1="410" x2="637" y2="528"/><line x1="284" y1="205" x2="401" y2="257"/><line x1="492" y1="144" x2="364" y2="81"/><line x1="303" y1="371" x2="105" y2="200"/><line x1="648" y1="231" x2="492" y2="144"/><line x1="139" y1="541" x2="303" y2="371"/><line x1="492" y1="144" x2="401" y2="257"/><line x1="284" y1="205" x2="303" y2="371"/><line x1="303" y1="371" x2="401" y2="257"/><line x1="139" y1="541" x2="441" y2="487"/></g>
+<g stroke="#00d4ff" stroke-opacity=".18" stroke-width="1" stroke-dasharray="4 6"><line x1="401" y1="257" x2="648" y2="231"/><line x1="401" y1="257" x2="492" y2="144"/></g>
+<g fill="#050505" stroke="#00d4ff" stroke-width="2"><circle cx="284" cy="205" r="5"/><circle cx="563" cy="410" r="6"/><circle cx="648" cy="231" r="6"/><circle cx="492" cy="144" r="6"/><circle cx="139" cy="541" r="6"/><circle cx="303" cy="371" r="6"/><circle cx="485" cy="604" r="6"/><circle cx="105" cy="200" r="5"/><circle cx="637" cy="528" r="5"/><circle cx="364" cy="81" r="5"/><circle cx="441" cy="487" r="5"/></g>
+<circle cx="401" cy="257" r="34" fill="#00d4ff" fill-opacity=".08" stroke="#00d4ff" stroke-opacity=".4"/>
+<circle cx="401" cy="257" r="11" fill="#00d4ff"/>
+</svg>

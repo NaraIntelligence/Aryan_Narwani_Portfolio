@@ -4,6 +4,7 @@
 import { initLenis }       from './lenis.js';
 import { initParticles }   from './particles.js';
 import { initMarquee }     from './marquee.js';
+import { initCarousels }   from './carousel.js';
 import { initPreloader }   from './preloader.js';
 import { runHeroEntrance } from './hero.js';
 import { initNav }         from './nav.js';
@@ -22,6 +23,7 @@ try {
 
   initParticles();
   initMarquee();
+  initCarousels(); /* before ScrollTrigger setup so section heights are final */
   initPreloader(() => runHeroEntrance());
   initNav(lenis);
   initTransitions();
