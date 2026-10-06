@@ -2,9 +2,11 @@
    CONTACT — Form handler + smooth anchor scroll
 ═══════════════════════════════════════════════════════════════════ */
 
-const SUPABASE_URL = 'https://qyuaekusrzttoueebpsn.supabase.co';
-const SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InF5dWFla3Vzcnp0dG91ZWVicHNuIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODExNjkwODksImV4cCI6MjA5Njc0NTA4OX0.62UWR5cDoPTIPm41fBucrRQozazYuXX1_tQKYF7hhQQ';
-const FORMSPREE_ID = 'meewzbpo';
+/* Publishable key (public by design): RLS only lets it INSERT into portfolio_contacts */
+const SUPABASE_URL   = 'https://mmhhsocuxrrwttkiugby.supabase.co';
+const SUPABASE_KEY   = 'sb_publishable_bL0VZGgogunMYhDuzRFSBA_l4ohHVYJ';
+const SUPABASE_TABLE = 'portfolio_contacts';
+const FORMSPREE_ID   = 'meewzbpo';
 
 export function initContact(lenis) {
   /* ─── Form submit ─── */
@@ -25,17 +27,17 @@ export function initContact(lenis) {
       };
 
       try {
-        /* ── 1. Guardar en Supabase ── */
-        await fetch(`${SUPABASE_URL}/rest/v1/contacts`, {
+        /* ── 1. Guardar en Supabase (si falla, el email se envía igualmente) ── */
+        const saved = await fetch(`${SUPABASE_URL}/rest/v1/${SUPABASE_TABLE}`, {
           method:  'POST',
           headers: {
-            'Content-Type':  'application/json',
-            'apikey':        SUPABASE_KEY,
-            'Authorization': `Bearer ${SUPABASE_KEY}`,
-            'Prefer':        'return=minimal',
+            'Content-Type': 'application/json',
+            'apikey':       SUPABASE_KEY,
+            'Prefer':       'return=minimal',
           },
           body: JSON.stringify(data),
-        });
+        }).then(r => r.ok).catch(() => false);
+        if (!saved) console.warn('Contact form: could not save to Supabase, sending email only');
 
         /* ── 2. Enviar email via Formspree ── */
         const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
