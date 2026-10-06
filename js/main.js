@@ -6,6 +6,7 @@ import { initParticles }   from './particles.js';
 import { initMarquee }     from './marquee.js';
 import { initCarousels }   from './carousel.js';
 import { initSkillStreams } from './streams.js';
+import { initFlightPath }  from './flightpath.js';
 import { initPreloader }   from './preloader.js';
 import { runHeroEntrance } from './hero.js';
 import { initNav }         from './nav.js';
@@ -30,6 +31,7 @@ try {
   initNav(lenis);
   initTransitions();
   initAnimations();
+  initFlightPath();
   initContact(lenis);
 
 } catch (e) {

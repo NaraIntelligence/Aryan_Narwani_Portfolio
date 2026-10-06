@@ -522,9 +522,14 @@
     <h2 class="section-title" data-anim="title">The path<br/><em>so far.</em></h2>
 
     <div class="timeline">
-      <div class="timeline-line">
-        <div class="timeline-line-fill" id="timelineLineFill"></div>
-      </div>
+      <!-- Curved flight path (drawn by js/flightpath.js through each dot) -->
+      <svg class="timeline-path" aria-hidden="true">
+        <path class="timeline-path-base"/>
+        <path class="timeline-path-progress"/>
+      </svg>
+      <span class="timeline-plane" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M22 2 11 13"/><path d="M22 2 15 22 11 13 2 9z"/></svg>
+      </span>
 
       <!-- ─── UNIVERSITY ─── -->
       <div class="timeline-item" data-anim="timeline">

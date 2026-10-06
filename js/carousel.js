@@ -12,7 +12,7 @@ export function initCarousels() {
       centeredSlides: true,
       loop: true,
       speed: 600,
-      autoplay: { delay: 4500, disableOnInteraction: false, pauseOnMouseEnter: true },
+      autoplay: { delay: 3500, disableOnInteraction: false },
       /* forceToAxis: only horizontal wheel moves it, so page scroll (Lenis) isn't trapped */
       mousewheel: { forceToAxis: true },
       keyboard: { enabled: true, onlyInViewport: true },

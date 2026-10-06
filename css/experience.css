@@ -3,15 +3,25 @@
 ═══════════════════════════════════════════════════════════════════ */
 #experience{background:var(--bg-2);}
 .timeline{position:relative;padding-left:0;}
-.timeline-line{
-  position:absolute;left:8px;top:8px;bottom:8px;width:1px;
-  background:linear-gradient(to bottom,
-    transparent,var(--line-2) 8%,var(--line-2) 92%,transparent);
+/* ─── Flight path: dashed route + cyan trail + paper plane ─── */
+.timeline-path{
+  position:absolute;inset:0;width:100%;height:100%;
+  overflow:visible;pointer-events:none;
 }
-.timeline-line-fill{
-  position:absolute;top:0;left:0;width:100%;height:0;
-  background:var(--accent);
+.timeline-path path{fill:none;stroke-width:1.5;stroke-linecap:round;}
+.timeline-path-base{stroke:var(--line-2);stroke-dasharray:3 9;}
+.timeline-path-progress{stroke:var(--accent);filter:drop-shadow(0 0 6px rgba(0,212,255,.6));}
+.timeline-plane{
+  position:absolute;top:0;left:0;z-index:2;display:block;
+  width:30px;height:30px;margin:-15px 0 0 -15px;
+  pointer-events:none;will-change:transform;
 }
+.timeline-plane svg{
+  width:100%;height:100%;fill:var(--bg-2);stroke:var(--accent);
+  stroke-width:1.5;stroke-linejoin:round;stroke-linecap:round;
+  filter:drop-shadow(0 0 8px rgba(0,212,255,.7));
+}
+
 .timeline-item{
   padding-left:3.5rem;padding-bottom:3.5rem;position:relative;
 }
@@ -104,4 +114,19 @@
 }
 .timeline-parallel-label::before{
   content:'';width:1.5rem;height:1px;background:var(--accent);opacity:.6;
+}
+
+/* ─── Zig-zag layout: cards alternate sides, each dot sits in the
+       empty half so the route sweeps across the whole width ─── */
+@media(min-width:641px){
+  .timeline-item{width:46%;padding-left:0;padding-bottom:5rem;}
+  .timeline-item:last-child{padding-bottom:0;}
+  .timeline-item:nth-of-type(even){margin-left:auto;}
+  .timeline-item .timeline-dot{top:50%;margin:-8.5px 0 0 -8.5px;}
+  .timeline-item:nth-of-type(odd) .timeline-dot{left:173.9%;}  /* 80% of the timeline */
+  .timeline-item:nth-of-type(even) .timeline-dot{left:-73.9%;} /* 20% of the timeline */
+}
+/* Mobile: gentle zig-zag inside the left gutter */
+@media(max-width:640px){
+  .timeline-item:nth-of-type(even) .timeline-dot{left:22px;}
 }
